@@ -1,0 +1,82 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Handbook/Source Code Structure" />
+
+# Source Code Structure
+
+## Project Directory Overview
+
+### Centralized Source Code
+
+- **`src`**: Houses all application code, ensuring a cohesive structure.
+
+### Component Organization
+
+- **`components`**: Contains reusable UI components, categorized for intuitive navigation:
+  - **`atoms`**: Basic building blocks like buttons, icons, and inputs.
+  - **`molecules`**: Combinations of atoms forming larger UI elements like menus and dropdowns.
+  - **`organisms`**: Self-contained components like forms and modals.
+  - **`templates` (optional)**: Houses layout components, depending on project structure.
+  - **`pages`**: Represents entire screens or sections.
+
+### Shared Logic and Functionality
+
+- **`hooks`**: Custom React hooks for encapsulating reusable logic and managing state.
+- **`utils`**: General-purpose utilities like data formatting functions and constants.
+- **`store`**: Manages application state through Redux:
+  - **`reducers`**: Pure functions for handling state updates.
+- **`services`**: Interacts with external APIs for data fetching and server-side communication.
+
+### Type Definitions and Styles
+
+- **`types`**: Houses TypeScript type definitions for enhanced code reliability and maintainability.
+- **`styles`**: Contains global styles and component-specific stylesheets using technologies like SCSS or styled-components.
+
+### Static Assets and Testing
+
+- **`public`**: Stores static assets like images and fonts.
+- **`tests`**: Houses unit tests for components and utilities, ensuring code quality and functionality.
+
+## Imports Hierarchy
+
+### Optimized Readability
+
+Organize imports in a logical hierarchy for clarity:
+
+1. **React imports**
+2. **Utility functions and hooks**
+3. **Custom components**
+4. **Static files, types, and styles**
+
+### Example of Import Grouping
+
+To improve components' readability, group component imports in the following way:
+
+```javascript
+// react import
+import { FC } from 'react';
+
+// utility, hook functions
+import { filterItems } from './Component.utils.ts';
+import { useDispatch } from 'react-redux';
+...
+
+// components
+import ItemsList from '../components/ItemsList';
+...
+
+// static files, types, styles
+import itemImg from '@public/images/item.jpg';
+import { ComponentProps } from './Component.types.ts';
+import styles from './Component.module.scss';
+...
+
+```
+
+### Import Guidelines
+
+1. **Absolute Imports: Access modules or components outside the current directory from the src directory.**
+2. **Relative Imports: Import files within the same directory or subdirectory.**
+3. **Utilize Aliases: Enhance readability and conciseness by creating aliases for frequently used modules.**
+4. **Import Multiple Components: Use object destructuring to import multiple components from a single file.**
+5. **Avoid Nested Imports: Maintain clean module dependencies by preventing nested imports.**

@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Handbook/Codebase Structure" />
+
+# Codebase Structure
+
+## Building an Efficient and Collaborative Environment
+
+Ensuring a well-structured codebase empowers both individual developers and collaborative teams to work efficiently and effectively. By adhering to consistent file organization principles, we cultivate a codebase that is:
+
+- **Easily Navigable**: Developers can quickly locate and understand code components.
+- **Collaboration-Friendly**: Team members can seamlessly contribute to different areas of the project.
+- **Maintainable**: Long-term code health is preserved, even with team changes.
+- **Inspiring**: Shared structure encourages learning and inspiration from colleagues' code.
+
+## Standardizing Files and Folders
+
+### Project Root Essentials
+
+The project root directory should house the following files and folders:
+
+- **`package.json`**: Manages project dependencies, scripts, and configuration.
+- **`README.md`**: Provides a comprehensive project overview, installation steps, and usage guidance.
+- **`.gitignore`**: Specifies files and folders to exclude from version control.
+- **`.babelrc`**: Configures Babel transpilation settings.
+- **`.editorconfig`**: Establishes common editor settings for consistency across team members.
+- **`.eslintignore`**: Identifies files to exclude from ESLint linting.
+- **`.eslintrc.js`**: Customizes ESLint linting rules to ensure code quality.
+- **`.npmrc`**: Sets global configuration for the npm package manager.
+- **`.prettierignore`**: Lists files to exclude from Prettier formatting.
+- **`.prettierrc`**: Defines Prettier formatting rules for consistent code style.
+- **`jest.config.js`**: Configures the Jest unit testing framework.
+- **`tsconfig.json`**: Defines TypeScript compilation settings.
+- **`yarn.lock`**: Locks down specific package versions installed with Yarn.
+
+### Folder Organization Best Practices
+
+- **Group Related Files**: Avoid cluttered main folders by grouping related files into logical subdirectories.
+- **Follow Consistent Logic**: Structure subdirectories based on functionality or feature areas.
+- **Utilize Clear and Concise Naming**: Choose descriptive names that accurately reflect folder contents.
+- **Embrace Hierarchy**: Establish a clear hierarchy of folders and subfolders for optimal organization.
+
+By embracing these guidelines, we collectively contribute to a codebase that is not only well-structured but also sets the stage for efficient development, seamless collaboration, and long-term maintainability.
